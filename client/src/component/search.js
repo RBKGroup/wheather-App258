@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 // import axios from 'axios';
 const api = {
   key: '21e8aec578e07d1343c0942cb7627fa1',
-  base: 'https:api.openweathermap.org/data/2.5/',
+  base: 'https://api.openweathermap.org/data/2.5/',
 };
 
 function Weathers() {
