@@ -27,7 +27,7 @@ function Weathers() {
       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`, {
         headers: {
           'Content-Type': 'application/json',
-          Accept: 'application/json',
+          'Accept': 'application/json',
         },
       })
         .then((res) => res.json())
