@@ -12,25 +12,10 @@ function Weathers() {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
 
-  //   const search = (evt) => {
-  //     if (evt.key === "Enter") {
-  //   axios.get(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-  //   .then((result) => {
-  //     setWeather(result);
-  //     setQuery("");
-  //     console.log(result);
-  //   });
-  // }
-  // }
   const search = (evt) => {
     if (evt.key === 'Enter') {
-      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`, {
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-        },
-      })
-        .then((res) => res.json())
+      axios
+        .get(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
         .then((result) => {
           setWeather(result);
           setQuery('');
@@ -38,6 +23,22 @@ function Weathers() {
         });
     }
   };
+  //   const search = (evt) => {
+  //     if (evt.key === 'Enter') {
+  //       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`, {
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //           Accept: 'application/json',
+  //         },
+  //       })
+  //         .then((res) => res.json())
+  //         .then((result) => {
+  //           setWeather(result);
+  //           setQuery('');
+  //           console.log(result);
+  //         });
+  //     }
+  //   };
 
   var dateBuilder = (d) => {
     var months = [
