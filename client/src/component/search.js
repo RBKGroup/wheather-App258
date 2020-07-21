@@ -23,36 +23,31 @@ function Weathers() {
   //         });
   //     }
   //   };
-  //   const search = (evt) => {
-  //     if (evt.key === 'Enter') {
-  //       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`, {
-  //         headers: {
-  //           //   'Content-Type: 'application/json',
-  //           Accept: 'application/json; odata=verbose',
-  //         },
-  //       })
-  //         .then((res) => res.text())
-  //         .then((result) => {
-  //           setWeather(result);
-  //           setQuery('');
-  //           console.log(result);
-  //         });
-  //     }
-  //   };
-  async function search(evt) {
+  const search = (evt) => {
     if (evt.key === 'Enter') {
-      try {
-        const res = await fetch(
-          `${api.base}weather?q=${query}&units=metric&APPID=${api.key}`
-        );
-        console.log('anything');
-        const json = await res.json();
-        console.log('json', json);
-      } catch (err) {
-        console.error('err', err);
-      }
+      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+        .then((res) => res.text())
+        .then((result) => {
+          setWeather(result);
+          setQuery('');
+          console.log(result);
+        });
     }
-  }
+  };
+  //   async function search(evt) {
+  //     if (evt.key === 'Enter') {
+  //       try {
+  //         const res = await fetch(
+  //           `${api.base}weather?q=${query}&units=metric&APPID=${api.key}`
+  //         );
+  //         console.log('anything');
+  //         const json = await res.json();
+  //         console.log('json', json);
+  //       } catch (err) {
+  //         console.error('err', err);
+  //       }
+  //     }
+  //   }
 
   var dateBuilder = (d) => {
     var months = [
