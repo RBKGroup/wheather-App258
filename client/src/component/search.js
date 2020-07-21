@@ -45,6 +45,7 @@ function Weathers() {
         const res = await fetch(
           `${api.base}weather?q=${query}&units=metric&APPID=${api.key}`
         );
+        console.log('anything');
         const json = await res.json();
         console.log('json', json);
       } catch (err) {
