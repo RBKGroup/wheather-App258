@@ -2,7 +2,7 @@ import React from "react";
 // import cors from 'cors'
 import { Link, withRouter } from "react-router-dom";
 import axios from "axios";
-import Weathers from "./search"
+// import Weathers from "./search"
 class Login extends React.Component {
   constructor(props) {
     super(props);

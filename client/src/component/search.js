@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 //import "./style.css";
 //  import { query } from 'express';
-import axios from 'axios';
+// import axios from 'axios';
 const api = {
   key: '21e8aec578e07d1343c0942cb7627fa1',
   base: 'https:api.openweathermap.org/data/2.5/',
@@ -12,33 +12,33 @@ function Weathers() {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
 
-  const search = (evt) => {
-    if (evt.key === 'Enter') {
-      axios
-        .get(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-        .then((result) => {
-          setWeather(result);
-          setQuery('');
-          console.log(result);
-        });
-    }
-  };
-  //   const search = (evt) => {
-  //     if (evt.key === 'Enter') {
-  //       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`, {
-  //         headers: {
-  //           'Content-Type': 'application/json',
-  //           Accept: 'application/json',
-  //         },
-  //       })
-  //         .then((res) => res.json())
-  //         .then((result) => {
-  //           setWeather(result);
-  //           setQuery('');
-  //           console.log(result);
-  //         });
-  //     }
-  //   };
+//   const search = (evt) => {
+//     if (evt.key === 'Enter') {
+//       axios
+//         .get(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+//         .then((result) => {
+//           setWeather(result);
+//           setQuery('');
+//           console.log(result);
+//         });
+//     }
+//   };
+    const search = (evt) => {
+      if (evt.key === 'Enter') {
+        fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`, {
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+        })
+          .then((res) => res.json())
+          .then((result) => {
+            setWeather(result);
+            setQuery('');
+            console.log(result);
+          });
+      }
+    };
 
   var dateBuilder = (d) => {
     var months = [
