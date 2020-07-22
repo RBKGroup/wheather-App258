@@ -103,7 +103,7 @@ function Weathers() {
 
         {typeof weather.main != 'undefined' ? (
           <div class='weather'>
-            <div className='location-box'>
+            <div className='location-box' >
               <div>
                 {weather.name}, {weather.sys.country}
               </div>
