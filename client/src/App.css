@@ -1,3 +1,162 @@
+.header {
+  font-size: 25px;
+  color: rgba(247, 191, 6, 0.952);
+}
+.hr {
+  width: 200px;
+}
+.inner-container {
+  opacity: 80%;
+  width: 500px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  background: #fff;
+  padding: 20px;
+  margin: 8% auto 0;
+  text-align: center;
+  border-radius: 10px;
+}
+.login-input {
+  background-color: white;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 10px 0;
+  width: 300px;
+  border: 2px solid #999;
+  outline: none;
+}
+.btn {
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  width: 320px;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  margin: 10px 0;
+  height: 45px;
+  outline: none;
+  cursor: pointer;
+}
+.p {
+  font-size: 15px;
+  color: black;
+}
+.link {
+  background-color: rgba(247, 191, 6, 0.952);
+  border: none;
+  color: white;
+  padding: 10px 13px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: -17px;
+}
+.h1 {
+  font-size: 15px;
+  color: white;
+  text-align: center;
+
+  margin-left: -1000px;
+  margin-top: -100px;
+  margin-bottom: 10%;
+}
+
+.weather {
+  padding: 40px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 36.5%;
+  text-align: center;
+  /* background-color: white; */
+  width: 300px;
+  font-weight: bold;
+  font-size: 15px;
+  height: 400px;
+  /* opacity: 55%;  */
+}
+.location-box {
+  padding: 40px;
+  border-radius: 10px;
+  margin-top: -30px;
+  margin-right: 50%;
+  text-align: center;
+  background-color: white;
+  width: 300px;
+  font-weight: bold;
+  font-size: 18px;
+  opacity: 55%;
+}
+
+.nav {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  height: 70px;
+}
+li,
+a {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+header {
+  /* margin-left: 10px; */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5%;
+}
+
+.links li {
+  display: inline-block;
+  padding: 0px 20px;
+  margin-top: -90px;
+  margin-bottom: -20px;
+}
+.links li a {
+  transition: all 0.3s ease 0s;
+  margin-top: 100px;
+}
+.links li a:hover {
+  color: rgba(247, 191, 6, 0.952);
+}
+.Weathers {
+  background-image: url('./GIFIMG.gif');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease-out;
+  width: 100%;
+  height: 100%;
+}
+
+.Weathers.warm {
+  background-image: url('./sunny2GIF.gif');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease-out;
+  width: 100%;
+  height: 100%;
+}
+.Weathers.cold {
+  background-image: url('./snowGIF.gif');
+  font-size: 18px;
+  color: black;
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease-out;
+  width: 100%;
+  height: 80%;
+}
+
 .App {
   text-align: center;
 }
@@ -5,6 +164,17 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.search-bar {
+  margin-left: 460px;
+  margin-top: 80px;
+  padding: 23px;
+  width: 450px;
+  outline: none;
+  height: 8px;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 15px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

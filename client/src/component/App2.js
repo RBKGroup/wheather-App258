@@ -1,15 +1,14 @@
 import React from 'react';
-import './App.css';
-import Registration from './component/registration';
-import Login from './component/login';
-import App2 from './component/App2';
+import '../App.css';
+import Weathers from './search';
+import About from './about';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
 } from 'react-router-dom';
-class App extends React.Component {
+class App2 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -20,14 +19,14 @@ class App extends React.Component {
       <div className='app'>
         <Router>
           <Switch>
-            <Route path='/auth/login'>
-              <Login setUserAuth={this.setUserAuth} />
+            <Route path='/auth/Weathers'>
+              <Weathers />
             </Route>
-            <Route exact path='/auth/reg'>
-              <Registration setUserAuth={this.setUserAuth} />
+            <Route exact path='/auth/About'>
+              <About />
             </Route>
             <PrivateRoute isAuthenticated={this.state.isAuthenticated} path='/'>
-              <App2 />
+              <Weathers />
             </PrivateRoute>
           </Switch>
         </Router>
@@ -55,4 +54,4 @@ function PrivateRoute({ children, isAuthenticated, ...rest }) {
   );
 }
 
-export default App;
+export default App2;

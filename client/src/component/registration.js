@@ -1,14 +1,14 @@
-import React from "react";
-import axios from "axios";
-//import "./register.css";
-import { Link, withRouter } from "react-router-dom";
+import React from 'react';
+import axios from 'axios';
+
+import { Link, withRouter } from 'react-router-dom';
 class Registration extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
-      password: "",
-      email: "",
+      username: '',
+      password: '',
+      email: '',
     };
   }
 
@@ -21,66 +21,78 @@ class Registration extends React.Component {
     e.preventDefault();
     const { username, email, password } = this.state;
     axios
-    .post(`http://localhost:5000/register`,
-      {
-        username, email, password 
-      },
-    )
-    .then((response) => {
-        if (response.data=== "created") {
-        console.log("NOW LOGIN TO CONFIRM YOUR  ACCOUNT")
-          this.props.setUserAuth(true)
-          this.props.history.push("/auth/login");
+      .post(`http://localhost:5000/register`, {
+        username,
+        email,
+        password,
+      })
+      .then((response) => {
+        if (response.data === 'created') {
+          console.log('NOW LOGIN TO CONFIRM YOUR  ACCOUNT');
+          this.props.setUserAuth(true);
+          this.props.history.push('/auth/login');
         }
       })
       .catch((error) => {
-        console.log("registration error", error);
-        this.props.setUserAuth(false)
+        console.log('registration error', error);
+        this.props.setUserAuth(false);
       });
   }
 
   render() {
     return (
-      <div className="inner-container">
-        <form onSubmit={this.handelSubmite.bind(this)} className="box">
-          <h1 className="header">Sign Up</h1>
-          <div className="input-group">
+      <div className='inner-container'>
+        <div class='h1'>
+          <h1>Weather App</h1>
+        </div>
+        <form onSubmit={this.handelSubmite.bind(this)} className='box'>
+          <h1 className='header'>Account Sign Up</h1>
+          <hr class='hr' />
+          <br />
+          <div className='input-group'>
             <input
-              type="text"
-              name="username"
+              type='text'
+              name='username'
               value={this.state.username}
               onChange={this.handelChange.bind(this)}
-              className="login-input"
-              placeholder="Username"
+              className='login-input'
+              placeholder='Username'
             />
           </div>
           <br />
 
-          <div className="input-group">
+          <div className='input-group'>
             <input
-              type="text"
-              name="email"
+              type='text'
+              name='email'
               value={this.state.email}
               onChange={this.handelChange.bind(this)}
-              className="login-input"
-              placeholder="Email"
+              className='login-input'
+              placeholder='Email'
             />
           </div>
           <br />
 
-          <div className="input-group">
+          <div className='input-group'>
             <input
-              type="password"
-              name="password"
+              type='password'
+              name='password'
               value={this.state.password}
               onChange={this.handelChange.bind(this)}
-              className="login-input"
-              placeholder="Password"
+              className='login-input'
+              placeholder='Password'
             />
           </div>
           <br />
-          <button class="btn">SignUp</button>
-          <Link to="/auth/login"> login now</Link>
+          <button class='btn'>SignUp</button>
+          <br />
+          <p>
+            you have alredy account !{' '}
+            <Link to='/auth/login' class='link'>
+              {' '}
+              login now
+            </Link>
+          </p>
         </form>
       </div>
     );
