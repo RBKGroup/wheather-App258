@@ -6,7 +6,7 @@
   width: 200px;
 }
 .inner-container {
-  opacity: 80%;
+  /* opacity: 80%; */
   width: 500px;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
   background: #fff;
