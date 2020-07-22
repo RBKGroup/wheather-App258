@@ -6,7 +6,7 @@
   width: 200px;
 }
 .inner-container {
-  /* opacity: 80%; */
+  opacity: 80% !important;
   width: 500px;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
   background: #fff;
@@ -77,7 +77,7 @@
   font-weight: bold;
   font-size: 15px;
   height: 400px;
-  /* opacity: 55%;  */
+  /* opacity: 55% !important; */
 }
 .location-box {
   padding: 40px;
@@ -86,11 +86,10 @@
   margin-right: 50%;
   text-align: center;
   background-color: white;
-  /* opacity: 55%; */
+  opacity: 55% !important;
   width: 300px;
   font-weight: bold;
   font-size: 18px;
- 
 }
 
 .nav {
