@@ -5,8 +5,11 @@
 .hr {
   width: 200px;
 }
+#spanw {
+  color: rgba(247, 191, 6, 0.952);
+}
 .inner-container {
-  opacity: 0.8 !important;
+  opacity: 80%;
   width: 500px;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
   background: #fff;
@@ -77,7 +80,7 @@
   font-weight: bold;
   font-size: 15px;
   height: 400px;
-  opacity: 0.5 !important;
+  /* opacity: 55%;  */
 }
 .location-box {
   padding: 40px;
@@ -86,10 +89,10 @@
   margin-right: 50%;
   text-align: center;
   background-color: white;
-  /* opacity: 55% !important; */
   width: 300px;
   font-weight: bold;
   font-size: 18px;
+  opacity: 55%;
 }
 
 .nav {
@@ -130,7 +133,7 @@ header {
   color: rgba(247, 191, 6, 0.952);
 }
 .Weathers {
-  background-image: url('./GIFIMG.gif');
+  background-image: url("./GIFIMG.gif");
   background-size: cover;
   background-position: bottom;
   transition: 0.4 ease-out;
@@ -139,7 +142,7 @@ header {
 }
 
 .Weathers.warm {
-  background-image: url('./sunny2GIF.gif');
+  background-image: url("./sunny2GIF.gif");
   background-size: cover;
   background-position: bottom;
   transition: 0.4 ease-out;
@@ -147,7 +150,7 @@ header {
   height: 100%;
 }
 .Weathers.cold {
-  background-image: url('./snowGIF.gif');
+  background-image: url("./snowGIF.gif");
   font-size: 18px;
   color: black;
   background-size: cover;
@@ -205,4 +208,90 @@ header {
   to {
     transform: rotate(360deg);
   }
+}
+
+.contact {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+} */
+
+#textarea {
+  height: 200px;
+}
+.aboutpage {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  width: 600px;
+  margin-left: 20px;
+  opacity: 0.8;
+  font-weight: 400;
+}
+.inputs{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+p{
+  color: #fff;
+  margin-left: 20px;
+}
+h3{
+  color: white;
+  margin-left: 20px;
+
+}
+.butn{
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  width: 320px;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  margin: 10px 0;
+  height: 45px;
+  outline: none;
+  cursor: pointer;
+}
+
+.butn :hover{
+  background-color: orange;
+
 }

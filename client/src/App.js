@@ -8,27 +8,31 @@ import {
   Switch,
   Route,
   Redirect,
-} from 'react-router-dom';
-class App extends React.Component {
+} from "react-router-dom";
+ class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      
+    };
   }
   setUserAuth = (value) => this.setState({ isAuthenticated: true });
   render() {
     return (
-      <div className='app'>
+      <div className="app">
+       
         <Router>
           <Switch>
-            <Route path='/auth/login'>
+            <Route path="/auth/login">
               <Login setUserAuth={this.setUserAuth} />
             </Route>
-            <Route exact path='/auth/reg'>
+            <Route exact path="/auth/reg">
               <Registration setUserAuth={this.setUserAuth} />
             </Route>
-            <PrivateRoute isAuthenticated={this.state.isAuthenticated} path='/'>
-              <App2 />
+            <PrivateRoute isAuthenticated={this.state.isAuthenticated} path="/">
+           < App2/>
             </PrivateRoute>
+     
           </Switch>
         </Router>
       </div>
@@ -45,7 +49,7 @@ function PrivateRoute({ children, isAuthenticated, ...rest }) {
         ) : (
           <Redirect
             to={{
-              pathname: '/auth/login',
+              pathname: "/auth/login",
               state: { from: location },
             }}
           />

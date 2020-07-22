@@ -1,0 +1,26 @@
+[
+  {
+    "city": "gaza",
+    "news": " The weather in Palestine during the summer is mild on the coast overlooking the Mediterranean Sea and hot in the Jordan Valley"
+  },
+  {
+    "city": "algeria",
+    "news": "The weather in Algeria in the summer is characterized as mild on the coast overlooking the Mediterranean Sea and also cold in mountainous areas and hot in other regions"
+  },
+  {
+    "city": "egypt",
+    "news": "The weather in Egypt in the summer is very hot in the desert areas and somewhat mild on the coast overlooking the Mediterranean Sea"
+  },
+  {
+    "city": "libya",
+    "news": "The weather in Egypt in the summer is very hot in the desert areas and somewhat mild on the coast overlooking the Mediterranean Sea"
+  },
+  {
+    "city": "canada",
+    "news": "The climate of Canada in general is very cold in winter, accompanied by heavy continuous snow during the four months from January to March. The temperatures during the winter are about (-18) below zero as an average for most parts of the country. As for the summer, it is moderate temperature and temperatures average (from 20 to 30) degrees Celsius."
+  },
+  {
+    "city": "alaska",
+    "news": "The climate of Alaska is harsh at home and mild on the southern coast where the population congregates"
+  }
+]

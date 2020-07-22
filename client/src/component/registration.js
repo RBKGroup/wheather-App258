@@ -26,16 +26,22 @@ class Registration extends React.Component {
         email,
         password,
       })
-      .then((response) => {
-        if (response.data === 'created') {
+      .then(response => {
+        console.log(response)
+        if (response.data) {
           console.log('NOW LOGIN TO CONFIRM YOUR  ACCOUNT');
           this.props.setUserAuth(true);
+          alert('NOW LOGIN TO CONFIRM YOUR  ACCOUNT');
           this.props.history.push('/auth/login');
-        }
+        } 
       })
-      .catch((error) => {
+      .catch(error => {
         console.log('registration error', error);
+        alert('THIS USERNAME IS ALREADY USED TRY ANOTHER ONE');
         this.props.setUserAuth(false);
+        this.setState({
+          username:''
+        })
       });
   }
 
