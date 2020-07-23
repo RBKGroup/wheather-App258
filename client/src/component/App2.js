@@ -1,38 +1,33 @@
 import React from 'react';
-import './App.css';
-import Registration from './component/registration';
-import Login from './component/login';
-import App2 from './component/App2';
+import '../App.css';
+import Weathers from './search';
+import About from './about';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
-} from "react-router-dom";
- class App extends React.Component {
+} from 'react-router-dom';
+class App2 extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      
-    };
+    this.state = {};
   }
   setUserAuth = (value) => this.setState({ isAuthenticated: true });
   render() {
     return (
-      <div className="app">
-       
+      <div className='app'>
         <Router>
           <Switch>
-            <Route path="/auth/login">
-              <Login setUserAuth={this.setUserAuth} />
+            <Route path='/auth/Weathers'>
+              <Weathers />
             </Route>
-            <Route exact path="/auth/reg">
-              <Registration setUserAuth={this.setUserAuth} />
+            <Route exact path='/auth/About'>
+              <About />
             </Route>
-            <PrivateRoute isAuthenticated={this.state.isAuthenticated} path="/">
-           < App2/>
+            <PrivateRoute isAuthenticated={this.state.isAuthenticated} path='/'>
+              <Weathers />
             </PrivateRoute>
-     
           </Switch>
         </Router>
       </div>
@@ -49,7 +44,7 @@ function PrivateRoute({ children, isAuthenticated, ...rest }) {
         ) : (
           <Redirect
             to={{
-              pathname: "/auth/login",
+              pathname: '/auth/login',
               state: { from: location },
             }}
           />
@@ -59,4 +54,4 @@ function PrivateRoute({ children, isAuthenticated, ...rest }) {
   );
 }
 
-export default App;
+export default App2;
